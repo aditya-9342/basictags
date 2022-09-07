@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<head>
+    <style>
+        #cr {
+
+        }
+
+        .cr {
+
+        }
+    </style>
+</head>
+<html>
+    <body style="background-color:rgb(244, 244, 218);">
+        <!-- <form style="position:50% ;"> -->
+            <h3 id="cr" class="cr" style="color:red" ;>Details</h3>
+                Name:
+                <input type="text" name="name" id="name">
+                <br>
+                password:
+                <input type="password" name="password" id="password"><br>
+                Email id:
+                <input type="email" name="email" id="email"><br>
+                Gender:
+                <input type="radio" name="radio1" id="radio1">Male
+                <input type="radio" name="radio2" id="radio2">female<br>
+                Contact:
+                <input type="number" name="number" id="number">
+                <h3 style="color:red ;">degree</h3>
+                <select name="degree" id="degree">
+                    <option selected="select degree---"></option>
+                    <option>B.com</option>
+                    <option>Bse</option>
+                    <option>Bca</option>
+                    <option>Be</option>
+                </select><br>
+                Hobbies:
+                <input type="checkbox" value="checkbox1" id="chckbox1">Reading
+                <input type="checkbox" value="chchbox2" id="chckbox2">singing
+                <input type="checkbox" value="chchbox3" id="chckbox3">dancing
+                <input type="checkbox" value="chchbox4" id="chckbox4">sleeping
+                <input type="checkbox" value="chchbox5" id="chckbox5">sports<br>
+                <h3 style="color:red;">address</h3>
+                <textarea name="textarea" id="txtarea" cols="20" rows="6"></textarea><br>
+                Attach your resume:
+                <input type="file" name="file" id="resume"><br>
+                Upload your image:
+                <input type="image" name="image" id="image"> upload image<br>
+                <button type="submit"   name="submit the form" id="btn" style="background-color:rgb(7, 31, 247) ; color: black;" onclick="getVal()">Submit</button>
+
+           <script>
+                function getVal() {
+                   var name = $("#name").val();
+            
+
+                   if(name == "") {
+                    alert("Name Required");
+
+                  }
+                   else{
+                    alert(name)
+                        var letters = /^[A-Za-z]+$/;
+                        if(name.match(letters))
+                        {
+                            return true;
+                        }
+                        else
+                        {
+                            alert("name shld cntns only chrctrs nmbrs dont cntns");
+                        return false;
+                        }
+
+
+                        }
+                   let password=$("#password").val();
+                   if(password==""){
+                    alert("passwrd rqrd");
+                   }
+                   let number=$("#number").val();
+                   if(number==""||number>10){
+                    alert("contact nmbr is rqrd");
+                   }
+                   
+
+                }
+                
+
+
+           </script> 
+
+
+        <!-- </form> -->
+
+    </body>
+</html>
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
